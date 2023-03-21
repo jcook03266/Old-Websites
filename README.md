@@ -2,6 +2,8 @@
 This is a collection of a few websites I've done in the past with pure HTML and CSS, no React, or Vue, or Angular, or any higher level front-end technologies used for web apps. Feel free to reuse any components, or take inspiration from my design elements.
 
 ## By Prince Media
+- Video editing company / group
+
 ### Home
 [![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/ByPrinceMediaWebsite/index.html)
 
@@ -17,3 +19,21 @@ This is a collection of a few websites I've done in the past with pure HTML and 
 ### 404 Page
 [![Hero](https://user-images.githubusercontent.com/63657230/226702957-75736130-ee74-4814-b29a-331e87aff3b7.png)](https://raw.githack.com/jcook03266/Old-Websites/main/ByPrinceMediaWebsite/404.html)
 - Note: Click on each image to be brought directly to the rendered HTML page
+
+## The QRG
+- Quantum Research Club Website
+
+### Home
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/index.html)
+
+### Contact Us
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Contact-us.html)
+
+### Apply
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Apply.html)
+
+### Privacy Policy
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Privacy-policy.html)
+
+### Contact Form Response Email
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/contact-form-response-email.html)

@@ -24,16 +24,16 @@ This is a collection of a few websites I've done in the past with pure HTML and 
 - Quantum Research Club Website
 
 ### Home
-[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/index.html)
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/TheQRG/index.html)
 
 ### Contact Us
-[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Contact-us.html)
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/TheQRG/Contact-us.html)
 
 ### Apply
-[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Apply.html)
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/TheQRG/Apply.html)
 
 ### Privacy Policy
-[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/Privacy-policy.html)
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/TheQRG/Privacy-policy.html)
 
 ### Contact Form Response Email
-[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/blob/main/TheQRG/contact-form-response-email.html)
+[![Hero](https://user-images.githubusercontent.com/63657230/226694728-a2db2bab-afb0-4d90-9fb6-80f97b34165a.png)](https://raw.githack.com/jcook03266/Old-Websites/main/TheQRG/contact-form-response-email.html)

@@ -1,0 +1,621 @@
+/* Universal style sheet for universal page properties such as font-families for tags */ 
+
+/* link to the style sheet 
+<link rel="stylesheet" href="QRG-Universal-content.css">
+*/
+
+/* Styling for the selection (highlighting) */
+/* When a person highlights a piece of text to copy and paste, the default
+acting is overridden by this */
+
+/*** Works on common browsers ***/
+::selection {
+    background-color: transparent;
+    text-shadow: .5px .5px ;
+}
+
+/*** Mozilla based browsers ***/
+::-moz-selection {
+   background-color: transparent;
+    text-shadow: .5px .5px ;
+}
+
+/***For Other Browsers ***/
+::-o-selection {
+    background-color: transparent;
+    text-shadow: .5px .5px ;
+}
+
+::-ms-selection {
+    background-color: transparent;
+    text-shadow: .5px .5px ;
+}
+
+/*** For Webkit ***/
+::-webkit-selection {
+    background-color: transparent;
+    text-shadow: .5px .5px ;
+}
+
+/* Styling for the selection (highlighting) */
+
+/* Styling for Anti-fouc delayed load document */
+/* Temp Style sheet that prevents FOUC by loading up the rule automatically */
+#body-id{
+background-color: black;
+}
+#Document_container{
+opacity: 0;    
+} 
+.body{
+outline: none;
+}
+/* The rule hierarchy is overruled after 3 seconds, after which the opacity becomes 1 and the content is loaded */
+/* HTML Code for the Document delayed load  ANTI-FOUC
+
+<body style = "overflow-x: hidden; margin:0px; overflow-y: hidden;" id = "body-id">
+<section style = "transition: .5s;" id = "Document_container">
+<!-- Start of page -->
+
+<!-- End of page -->
+</section>
+</body>
+
+*/
+/* JS Code for the Document delayed load ANTI-FOUC
+
+window.onload = function() {
+setTimeout(function(){ 
+document.getElementById("Document_container").style.opacity = "1";}, 1000);
+};   
+
+
+*/
+
+
+/* Styling for cookies acceptance banner pop up */
+.cookie-banner {
+position: fixed;
+bottom: 10vh;
+padding: 5px 20px;
+align-items: center;
+text-align: center;
+justify-content: space-between;
+background-color: white;
+border-color: black;
+border-width: 1px;
+border-radius: 25px;
+border-style: solid;
+min-width: 200px;
+left: 50%;
+transform: translate(-50%, -50%);
+height: auto;
+z-index: 200;
+background: linear-gradient(140deg, white 80%, black 20%); 
+}
+.Cont-cookies-cnfrm-bttn{
+margin-left: auto;
+margin-right: auto;
+display: inline-block;
+padding-top: 10px;
+}
+.Cookies-cnfrm-bttn{
+padding-top: 10px;
+padding-bottom: 10px;
+float: left;
+text-align: center;
+padding-left: 5px;
+}
+.Cookies-cnfrm-bttn-txt{
+border-style: solid;
+border-color: black;
+border-radius: 25px;
+border-width: 1px;
+padding: 5px;
+color: black;
+background-color: white;
+width: auto;
+height: auto;
+cursor: pointer; 
+text-align: center;
+transition: .5s;
+}
+.Cookies-cnfrm-bttn-txt:hover{
+background-color: black; 
+color: white;
+}
+.Cookies-site-logo{
+padding-top: 10px;
+width: 10vh;  
+min-width: 80px;
+}
+/* End of cookies banner styling */
+/* HTML Code for the cookies element 
+
+<!-- Insert Cookies Prompt -->
+<section>
+<div class="cookie-banner" style="display: none">
+<p1 style = "cursor: default;">By using our website, you agree to our <u><a href="https://www.theqrg.org/Privacy-policy" target ="_blank"; style="color: black; cursor: pointer;">cookie policy</a></u></p1>
+<br>
+<div class = "Cont-cookies-cnfrm-bttn">
+<div class = "Cookies-cnfrm-bttn">
+<p1 class = "Cookies-cnfrm-bttn-txt" onclick= "window.open('https://policies.google.com/technologies/cookies?hl=en-US')">More details</p1>
+</div>
+<div class = "Cookies-cnfrm-bttn">
+<p1 class = "Cookies-cnfrm-bttn-txt" id = "cnfrm-cookies"> Ok </p1>
+</div>
+<br>
+<img class = "Cookies-site-logo" src = "https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/QRG_logo_loadingscreen_vector.svg" alt = "Cookies_site_logo" id = "Cookies-banner-sitelogo"> 
+</div>
+</div>
+</section>
+<!-- Insert Cookies Prompt -->
+
+
+*/
+/* JS Code for the cookies element 
+
+//Cookies
+if(localStorage.getItem('cookieSeen') != 'shown'){
+    $(".cookie-banner").delay(2000).fadeIn();
+    $(".Cookies-cnfrm-bttn-txt").delay(2000).fadeIn();
+    localStorage.setItem('cookieSeen','shown')
+}
+
+$('#cnfrm-cookies').click(function(e) {
+  $('.cookie-banner').fadeOut(); 
+  $('.Cookies-cnfrm-bttn-txt').fadeOut(); 
+});
+//Cookies
+
+
+*/
+
+p1{
+font-family: 'Raleway', sans-serif;
+}
+
+h1{
+font-family: 'Raleway', sans-serif;
+}
+h2{
+font-family: 'Raleway', sans-serif;
+}
+h3{
+font-family: 'Raleway', sans-serif;
+}
+p2{
+font-family: 'Open Sans', sans-serif;
+}
+p3{
+font-family: 'Open Sans', sans-serif;
+}
+a{
+text-decoration: none;
+}
+
+/* Custom Scroll bar */
+/* width */
+::-webkit-scrollbar {
+background-color: white;
+width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+box-shadow: inset 0 0 5px grey; 
+border-radius: 25px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: black; 
+border-radius: 25px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: gray; 
+}  
+/* Custom Scroll bar */
+
+/*Bottom Navigation bar styling */
+.parent_container_bottom_nav {
+background-color: white;
+position: fixed;
+bottom: 0px;
+height: 60px;
+width: 230px;
+float: left;
+display: flex;
+z-index: 2;
+border-radius: 25px; 
+border-width: 1px;
+border-color: black; 
+border-style: groove;
+overflow: hidden;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+img.bottom_nav_icons{
+height: 25px;
+width: 25px;
+}
+/* Style the links inside the navigation bar */
+.parent_container_bottom_nav a {
+float: center;
+display: flex;
+color: #f2f2f2;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
+}
+/* Change the color of links on hover */
+.parent_container_bottom_nav a:hover {
+background-color: #ddd; 
+height: 100%;
+color: black;
+}
+
+
+/*Bottom Navigation bar styling */
+
+/* HTML Code for the bottom nav element 
+
+<!-- start of bottom nav menu -->
+<div class="parent_container_bottom_nav" id = "bottom_nav">
+<a href="https://github.com/theqrg" target ="_blank" "#GitHub"><img src="https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/Social+Media/Githublogo_transparent.svg" title="Look to the future through our GitHub" class = "bottom_nav_icons" alt ="Git it!"></a>
+<a href="https://discord.gg/ZGSHgGr" target ="_blank" "#Discord"><img src="https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/Social+Media/Discordlogo_transparent.svg" title="Join the talk over on our Discord server" class = "bottom_nav_icons" alt ="Discord bot"></a>
+<a href="https://instagram.com/theqrg?igshid=tjqyqr0xz583" target ="_blank" "#Instagram"><img src="https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/Social+Media/Instagramlogo_transparent.svg" title="Follow our Instagram!" class = "bottom_nav_icons" alt ="IG"></a>
+<a href="https://twitter.com/theqrg" target ="_blank" "#Twitter"><img src="https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/Social+Media/Twitterlogo_transparent.svg" title="See the hottest news on our Twitter" class = "bottom_nav_icons" alt ="Tweet tweet"></a>
+</div>
+<!-- end of bottom nav menu -->
+
+
+*/
+/* JS Code for the bottom nav element 
+
+[NO JS]
+
+
+*/
+
+/* Side nav bar styling */
+.sidenav_open_button{
+display: block;
+cursor: pointer;
+position: fixed;
+right: 0;
+top: 50%;
+z-index: 1;
+transition: .5s;
+}
+.bar1, .bar2, .bar3 {
+width: 50px;
+height: 8px;
+background-color: black;
+margin: 6px 0;
+transition: 0.4s;
+}
+.change .bar1 {
+-webkit-transform:translatey(9px);
+transform:translatey(9px);
+opacity: 0;
+}
+.change .bar2 {opacity: 0;}
+.change .bar3 {
+-webkit-transform:translatey(-8px);
+transform:translatey(-8px);
+opacity: 0;
+}
+.sidenav_open_button:hover{
+transform: rotate(90deg);
+}
+.parent_container_side_navbar_QRG{
+width: auto;
+height: 100%;
+position: fixed;
+right: 0;
+top:0;
+z-index: 3;
+}
+.child_container_side_navbar_QRG{
+width: 350px;
+height: 100%;
+position: fixed;
+z-index: 3;
+right: 0;
+top:0;
+background: linear-gradient(50deg, white 90%, black 10%);   
+border-style: solid;
+border-width: 5px;
+border-color: black;
+padding-top: 0px;
+margin-right: -360px;
+transition: 0.5s;
+}
+.grandchild_container_side_navbar_QRG{
+width: 300px;
+height: 100%;
+margin-left: auto;
+margin-right: auto;
+}
+.sidenav_exit_button{
+right: 0;
+top:0;
+margin-right: 20px;
+margin-top: 20px;
+height: auto;
+width: auto;
+position: absolute;
+cursor: pointer;
+transition: .5s;
+}
+.bar4, .bar5, .bar6 {
+width: 35px;
+height: 5px;
+background-color: white;
+margin: 6px 0;
+transition: 0.4s;
+}
+.bar6{
+-webkit-transform: rotate(45deg) translate(-8px, -8px);
+transform: rotate(45deg) translate(-8px, -8px);
+}
+.bar5{opacity: 0;}
+.bar4{
+-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+transform: rotate(-45deg) translate(-9px, 6px);    
+}
+.sidenav_exit_button:hover{
+background-color: transparent;
+transform: scale(1.5);
+}
+.greatgrandchild_container_side_navbar_QRG{
+background-color: transparent;
+text-align: center;
+color: black;
+font-size: 30px;
+margin-top: 100px;
+width: 100%;
+height: 100%;
+}
+.greatgrandchild_text_side_navbar_QRG{
+font-size: 25px;
+font-weight: 400;
+color: black;
+cursor: pointer;
+transition: .25s;
+background-color: transparent;
+border-bottom: 1px solid black;
+}
+.greatgrandchild_text3_side_navbar_QRG{
+font-size: 25px;
+font-weight: 400;
+color: black;
+cursor: pointer;
+transition: .25s;     
+background-color: transparent;
+border-bottom: 1px solid black;
+}
+.greatgrandchild_text2_side_navbar_QRG{
+font-size: 25px;
+font-weight: 400;
+color: white;
+cursor: pointer;
+background-color: black;
+transition: .25s;
+padding-left: 40px;
+padding-right: 40px;
+border-bottom: 1px solid black;
+}
+.sidenav_dropdown_menu_container{
+display: inline-block;
+position: relative;    
+}
+.sidenav_dropbtn{
+font-size: 25px;
+font-weight: 400;
+color: black;
+cursor: pointer;   
+transition: .25s;
+background-color: transparent;
+border-bottom: 1px solid black;
+}    
+.sidenav_QRG_logo_image{
+transition: 1s;
+}
+.sidenav_QRG_logo_image:hover{
+transform: translateY(20px);
+}
+/* changes the color of the font to black whenever the user hovers over the element */
+.sidenav_dropbtn:hover{
+color: gray;
+}
+/* Change color of dropdown links on hover */
+.greatgrandchild_text_side_navbar_QRG:hover {
+letter-spacing: 2px; 
+color: white;
+background-color: black;
+padding-right: 20px;
+padding-left: 20px;
+}
+.greatgrandchild_text2_side_navbar_QRG:hover {
+padding-right: 60px;
+padding-left: 60px;
+color: white;
+}
+.greatgrandchild_text3_side_navbar_QRG:hover{
+letter-spacing: 1px; 
+color: white;
+background-color: black;    
+}
+.sidenav_dropbtn:hover{
+letter-spacing: 2px; 
+color: white;
+background-color: black;   
+padding-right: 20px;
+padding-left: 20px;
+}
+/* End of drop down menu styling */
+@media screen and (max-width: 830px) and (min-width: 568px) and (max-height: 450px) and (orientation: landscape) {
+.sidenav_open_button{
+display: none;
+}
+}
+/* Side nav bar styling */
+/* HTML Code for the sidenav element 
+
+<section>
+<!-- Div for side Nav bar --><!-- Provides the links shown at the main nav bar on the homepage -->
+<div title = "Open" class = "sidenav_open_button" id = "opennavbutton" onclick="opensidenav(this)"><!-- the open button --> <!-- three bars that animate onclick -->
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>   
+</div>
+<div class = "parent_container_side_navbar_QRG"> <!-- contains all of the containers -->
+<div class = "child_container_side_navbar_QRG" id = "sidenavbar_universal"> <!-- background -->
+<div class = "grandchild_container_side_navbar_QRG"> <!-- contains the exit button and log in button / google profile image -->
+<div title = "Close" class = "sidenav_exit_button" onclick="closesidenav(this)"> <!-- Exit button --> <!-- closes the side nav on click --> 
+<div class="bar4"></div>
+<div class="bar5"></div>
+<div class="bar6"></div>  
+</div> <!-- the exit button --> <!-- three bars that animate onclick -->
+<div class = "greatgrandchild_container_side_navbar_QRG"> <!-- contains all the links --> 
+<a onclick="closesidenav(this)" href = "#"><p1 class = "greatgrandchild_text2_side_navbar_QRG"> Home </p1></a>
+<br>
+<p1 onclick = "location.href='#WIQC_shortcut'; closesidenav(this);" class = "greatgrandchild_text_side_navbar_QRG"> About </p1><br>
+<a href="mailto:quantamnyc@nyit.edu"><p1 class = "greatgrandchild_text3_side_navbar_QRG"> Contact Us </p1></a>
+<br>
+<p1 onclick = "location.href= 'https://www.theqrg.org/Apply'" class = "greatgrandchild_text3_side_navbar_QRG"> Join Us </p1>
+<br>
+<p1 onclick = "location.href='#';" class = "greatgrandchild_text_side_navbar_QRG">Qbytes Blog</p1><br>
+<p1 onclick = "location.href='#QC_Vids'; closesidenav(this);" class = "greatgrandchild_text_side_navbar_QRG">Quantum News</p1><br>
+<a href = "https://www.nyit.edu/" target ="_blank"><p1 class = "greatgrandchild_text_side_navbar_QRG">NYIT</p1></a><br>
+<br><br>
+<div class = "sidenav_QRG_logo_image">
+<img src = "https://theqrgbucketresources.s3.us-east-2.amazonaws.com/Vector+Assets+/QRG_logo_loadingscreen_vector.svg" alt = "QRG_Logo" 
+title = "Keep calm and quantum on">
+</div>
+<br>
+<a href="mailto:admin@theqrg.org" target ="_blank"><p1 class = "greatgrandchild_text_side_navbar_QRG">Report a bug</p1></a><br>
+</div>
+</div>
+</div>   
+</div>
+<!-- Div for side Nav bar -->
+</section>
+
+
+*/
+/* JS Code for the sidenav element 
+
+//Side nav bar toggle function
+function opensidenav(x) {
+x.classList.toggle("change");
+document.getElementById("sidenavbar_universal").style.marginRight = "0px";
+document.getElementById("Document_container").style.opacity = "0.1";
+}
+//Side nav bar toggle function
+function closesidenav(x) {
+document.getElementById("sidenavbar_universal").style.marginRight = "-360px";
+document.getElementById("opennavbutton").classList.toggle("change");
+document.getElementById("Document_container").style.opacity = "1";
+}
+//Side nav bar toggle function
+
+
+*/
+
+/* The progress container (grey background) */
+.progress-container {
+z-index: 1;
+width: 90%;
+height: 8px;
+margin:auto;
+background: lightgray;
+border-radius: 25px; 
+border-color: white;
+border-width: 1px;
+border-style: solid;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+z-index: 1;
+height: 8px;
+background: white;
+width: 0%;
+} 
+/* End of progress bar */ 
+
+/* JS Code for the onscroll progress bar element 
+
+//The following is the progress bar you see placed inside of the footer at the bottom of the page
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+var scrolled = (winScroll / height) * 100;
+document.getElementById("myBar").style.width = scrolled + "%";
+}
+//End of progress bar
+
+
+*/
+
+/* Start of Footer Div Styling */ 
+/* footer for website */
+.footer_text{
+font-size: 12px;
+color: black;
+}
+
+.child_container_main-body_text7{
+color: black;
+font-size: 10px;
+}
+
+.footer {
+display: block;
+position: fixed;
+right: 0;
+bottom: 0;
+height: 30px;
+left: 0;
+z-index: 10; 
+padding: 10px;
+background-color: white;
+text-align: center;
+border-color: black;
+border-style: solid;
+border-width: 1px;
+}
+
+.footer_inner{ 
+
+}
+/* End of Footer Div Styling */
+/* HTML Code for the onscroll progress bar and footer element 
+
+<section>
+<!-- Start of Footer Div --> <!-- Includes site map, contact information and legal documents -->
+<footer class="footer" id = "footer_id">
+<div class="progress-container">
+<div class="progress-bar" id="myBar">
+</div>
+</div>
+<div class="footer_inner">
+    <p1 class="footer_text"> Powered by: JJCDesignsolutions.com </p1>
+<br>
+</div>
+</footer>  
+<!-- End of Footer Div --> <!-- Includes site map, contact information and legal documents -->
+</section>
+
+
+*/
+/* Universal style sheet for universal page properties such as font-families for tags */ 
